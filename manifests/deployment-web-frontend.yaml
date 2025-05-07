@@ -14,7 +14,10 @@ spec:
         app: web-frontend
     spec:
       containers:
-      - env:
+      - command:
+        - sleep
+        - infinity
+        env:
         - name: APP_NAME
           value: frontend
         - name: DEBUG
