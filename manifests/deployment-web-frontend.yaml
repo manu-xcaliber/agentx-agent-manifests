@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-frontend
-  namespace: my-app
+  namespace: agentx-agents
 spec:
   replicas: 2
   selector:
