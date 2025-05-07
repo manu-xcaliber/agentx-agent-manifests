@@ -19,7 +19,7 @@ spec:
           value: frontend
         - name: DEBUG
           value: 'true'
-        image: nginx:latest
+        image: busybox:latest
         name: web-frontend
         ports:
         - containerPort: 80
