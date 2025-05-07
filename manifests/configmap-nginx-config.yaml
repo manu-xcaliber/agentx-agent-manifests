@@ -6,4 +6,4 @@ data:
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: my-app
+  namespace: agentx-agents
