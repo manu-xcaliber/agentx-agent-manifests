@@ -5,4 +5,4 @@ data:
 kind: ConfigMap
 metadata:
   name: app-config
-  namespace: my-app
+  namespace: agentx-agents
