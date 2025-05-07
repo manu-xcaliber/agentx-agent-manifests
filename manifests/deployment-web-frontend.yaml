@@ -30,10 +30,3 @@ spec:
           requests:
             cpu: 100m
             memory: 64Mi
-        volumeMounts:
-        - mountPath: /etc/nginx/conf.d
-          name: config-volume
-      volumes:
-      - configMap:
-          name: nginx-config
-        name: config-volume
