@@ -22,7 +22,7 @@ spec:
           value: frontend
         - name: DEBUG
           value: 'true'
-        image: busybox:latest
+        image: ubuntu:latest
         name: web-frontend
         ports:
         - containerPort: 80
