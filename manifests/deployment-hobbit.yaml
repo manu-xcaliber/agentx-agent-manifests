@@ -1,11 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    dapr.io/app-id: hobbit
-    dapr.io/enabled: 'true'
-    dapr.io/metrics-port: '59160'
-    dapr.io/unix-domain-socket-path: ''
   labels:
     app: hobbit
   name: hobbit
@@ -17,6 +12,11 @@ spec:
       app: hobbit
   template:
     metadata:
+      annotations:
+        dapr.io/app-id: hobbit
+        dapr.io/enabled: 'true'
+        dapr.io/metrics-port: '59160'
+        dapr.io/unix-domain-socket-path: ''
       labels:
         app: hobbit
     spec:
