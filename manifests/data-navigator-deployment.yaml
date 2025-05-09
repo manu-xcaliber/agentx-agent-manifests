@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    reloader.stakater.com/auto: 'true'
+  labels:
+    app: data-navigator
+  name: data-navigator
+  namespace: agentx-agents
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-navigator
+  template:
+    metadata:
+      annotations:
+        dapr.io/app-id: data-navigator
+        dapr.io/enabled: 'true'
+        dapr.io/metrics-port: '59196'
+        dapr.io/unix-domain-socket-path: ''
+      labels:
+        app: data-navigator
+    spec:
+      containers:
+      - env:
+        - name: APP_CHANNEL_ADDRESS
+          value: '59196'
+        - name: DAPR_METRICS_PORT
+          value: '59196'
+        - name: DEBUG
+          value: 'true'
+        - name: APP_ID
+          value: data-navigator
+        envFrom:
+        - secretRef:
+            name: openai-secrets
+        image: ghcr.io/xcaliber-health/agentx-agents-base:1.0.0
+        imagePullPolicy: Always
+        name: data-navigator
+        ports:
+        - containerPort: 8004
+        volumeMounts:
+        - mountPath: /app/src/agent-spec.yaml
+          name: config-volume
+          subPath: agent-spec.yaml
+      volumes:
+      - configMap:
+          name: data-navigator
+        name: config-volume
