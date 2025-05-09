@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  config.json: "{\n  \"logLevel\": \"info\",\n  \"enableCache\": true,\n  \"apiVersion\"\
+    : \"v1\"\n}\n"
+kind: ConfigMap
+metadata:
+  labels:
+    app: app-config
+  name: app-config
+  namespace: agentx-agents
