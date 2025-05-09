@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: backend-api
+  name: backend-api
+  namespace: agentx-agents
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: backend-api
+  type: ClusterIP
