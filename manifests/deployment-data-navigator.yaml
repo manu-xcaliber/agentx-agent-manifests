@@ -41,7 +41,6 @@ spec:
         volumeMounts:
         - mountPath: /app/src/agent-spec.yaml
           name: config-volume
-          subPath: agent-spec.yaml
       volumes:
       - configMap:
           name: agent-config
