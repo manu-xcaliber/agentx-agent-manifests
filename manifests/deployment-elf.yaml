@@ -1,11 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    dapr.io/app-id: elf
-    dapr.io/enabled: 'true'
-    dapr.io/metrics-port: '59196'
-    dapr.io/unix-domain-socket-path: ''
   labels:
     app: elf
   name: elf
@@ -17,6 +12,11 @@ spec:
       app: elf
   template:
     metadata:
+      annotations:
+        dapr.io/app-id: elf
+        dapr.io/enabled: 'true'
+        dapr.io/metrics-port: '59196'
+        dapr.io/unix-domain-socket-path: ''
       labels:
         app: elf
     spec:
