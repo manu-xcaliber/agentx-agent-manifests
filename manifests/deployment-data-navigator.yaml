@@ -38,10 +38,3 @@ spec:
         name: data-navigator
         ports:
         - containerPort: 8004
-        volumeMounts:
-        - mountPath: /app/src/agent-spec.yaml
-          name: config-volume
-      volumes:
-      - configMap:
-          name: agent-config
-        name: config-volume
