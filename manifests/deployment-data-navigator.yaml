@@ -34,6 +34,7 @@ spec:
         - secretRef:
             name: openai-secrets
         image: ghcr.io/xcaliber-health/agentx-agents-base:1.0.0
+        imagePullPolicy: Always
         name: data-navigator
         ports:
         - containerPort: 8004
