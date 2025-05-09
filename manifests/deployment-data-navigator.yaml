@@ -6,7 +6,7 @@ metadata:
   name: data-navigator
   namespace: agentx-agents
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: data-navigator
