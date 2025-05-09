@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   agent-spec.yaml: "description: Sample YAML file creation\nname: AgentX\nversion:\
-    \ '1.1'\n\nmodel: bedrock-anthropic-3.7-sonnet-v1\n\npromptManagement:\n  - description:\
+    \ '1.2'\n\nmodel: bedrock-anthropic-3.7-sonnet-v1\n\npromptManagement:\n  - description:\
     \ A prompt template for a Data Navigator.\n    prompt_text: >\n      You are an\
     \ Xcaliber assistant. Use the tools to break down and solve queries\n    tags:\n\
     \      - modified\n      - AI\n      - assistant\n    template_name: data_navigator_v3\n\
