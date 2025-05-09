@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: data-navigator
+  name: data-navigator
+  namespace: agentx-agents
+spec:
+  ports:
+  - port: 80
+    targetPort: 8004
+  selector:
+    app: data-navigator
+  type: ClusterIP
