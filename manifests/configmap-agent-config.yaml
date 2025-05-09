@@ -7,7 +7,7 @@ data:
     \      - modified\n      - AI\n      - assistant\n    template_name: data_navigator_v3\n\
     \nmcp:\n  enabled: true\n  contexts:\n    - name: PatientDirectory\n      url:\
     \ https://mcp-pateint.xcaliberhealth.io/sse\n    - name: ProviderDirectory\n \
-    \     url: https://mcp-provider.xcaliberhealth.io/sse"
+    \     url: https://mcp-provider.xcaliberhealth.io/sse\n"
 kind: ConfigMap
 metadata:
   labels:
