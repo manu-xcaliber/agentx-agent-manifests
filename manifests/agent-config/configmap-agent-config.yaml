@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  agent-spec.yaml: "description: Sample YAML file creation\nname: AgentX\nversion:\
+    \ '1.4'\n\nmodel: bedrock-anthropic-3.7-sonnet-v1\n\npromptManagement:\n  - description:\
+    \ A prompt template for a Data Navigator.\n    prompt_text: >\n      You are an\
+    \ Xcaliber assistant. Use the tools to break down and solve queries\n    tags:\n\
+    \      - modified\n      - AI\n      - assistant\n    template_name: data_navigator_v3\n\
+    \nmcp:\n  enabled: true\n  contexts:\n    - name: PatientDirectory\n      url:\
+    \ https://mcp-pateint.xcaliberhealth.io/sse\n    - name: ProviderDirectory\n \
+    \     url: https://mcp-provider.xcaliberhealth.io/sse\n"
+kind: ConfigMap
+metadata:
+  labels:
+    app: agent-config
+  name: agent-config
+  namespace: agentx-agents
